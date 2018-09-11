@@ -1,70 +1,56 @@
-.section.is-primary{
+//borders
+.has-no-border{
+  border:0px;
+}
+.has-curved-border{
+  border-radius:50%;
+}
+.has-primary-border{
+  border: 1px solid $primary;
+}
+.has-gray-border{
+  // border: 1px solid $lightGray;
+}
+//endborder
+//shadows
+.has-no-shadow{
+  box-shadow:none;
+}
+//end shadows
+
+//background
+.has-white-background{
+  background:white;
+}
+.has-primary-background{
   background:$primary;
-  color:white;
+}
+.has-info-background{
+  background:$info;
+}
+.has-transparent-background{
+  background:transparent;
 }
 .has-gray-background{
-  background:#f7f9f9;
+  // background:$lightGray;
 }
-.is-hoverable{
-  cursor:pointer;
+.has-background-image{
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
-.paginate{
-  li {
-    display: inline;
-    border:1px;
-    border-radius:50%;
-    a{
-      display: inline-block;
-      color:#222533;
-      font-weight:400;
-      margin:0px 2px;
-      border: 1px solid #222533;
-      border-radius: 50%;
-      padding: 2px;
-      width: 29px;
-      font-size: 15px;
-      text-indent: 1;
-      text-align: center;
-      outline:none;
-      &:hover{
-        border:1px solid $primary;
-        background:$primary;
-        color:white;
-      }
-    }
-    &.active{
-      a{
-       border:1px solid $primary;
-       background:$primary;
-       color:white; 
-     }
-   }
- }
+.has-black-background {
+  background-color: black !important;
 }
-.m-t-5{
-  margin-top:5px;
-}
-.m-b-15{
-  margin-bottom:15px;
-}
-.m-b-25{
-  margin-bottom:15px;
-}
-.is-fullheight{
-  min-height:60vh;
-}
-.p-0-l-m{
-  @media screen and (min-width:769px){
-    padding-left:0px;  
-  }
-  
-}
-.p-0-r-m{
-  @media screen and (min-width:769px){
-    padding-right:0px;
-  }
-}
+//end background
 
+//typography
+.is-7 {
+  font-size: 0.85rem !important;
+}
+.is-bold{
+  font-weight:bold !important;
+}
 h1.is-white,
 h2.is-white,
 h3.is-white,
@@ -88,9 +74,109 @@ h2.is-primary,
 h3.is-primary,
 h4.is-primary,
 h5.is-primary,
-h6.is-primary,{
+h6.is-primary,
+p.is-primary,
+strong.is-primary,
+span.is-primary{
   color:$primary;
+}
+span.is-white,
+p.is-white{
+  color:$white;
+}
+
+.is-underlined{
+  text-decoration:underline;
+}
+//endtypography
+
+//button
+.button.is-transparent{
+  background:transparent;
+  border:none;
+  font-size:1.5rem;
+  .fa-icon{
+    position: relative;
+    top:3px;
+    margin-left:10px;
+  }
+  &:hover{
+    .fa-icon{
+      left:5px;
+      animation: all 0.5s;
+    }
+  }
+}
+//end button
+.is-hoverable{
+  cursor:pointer;
+}
+
+// positioning
+.is-vertically-centered {
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: center;
+}
+// end positioning
+
+
+
+.m-t-5{
+  margin-top:5px !important;
+}
+.m-t-10{
+  margin-top:10px !important;
+}
+.m-t-15{
+  margin-top:15px !important;
+}
+.m-t-25{
+  margin-top:25px !important;
+}
+.m-t-50 {
+  margin-top: 50px !important;
+}
+.m-b-5{
+  margin-bottom:5px !important;
+}
+.m-b-10{
+  margin-bottom:10px !important;
+}
+.m-b-15{
+  margin-bottom:15px !important;
+}
+.m-b-25{
+  margin-bottom:25px !important;
+}
+.m-b-50{
+  margin-bottom:50px !important;
+}
+.is-fullheight{
+  min-height:calc(100vh - 200px);
+}
+.p-0-l-m{
+  @media screen and (min-width:769px){
+    padding-left:0px;  
+  }
+  
+}
+.p-0-r-m{
+  @media screen and (min-width:769px){
+    padding-right:0px;
+  }
+}
+.p-5{
+  padding:5px !important;
 }
 .p-10{
   padding:10px !important;
+}
+.no-margin-bottom {
+  margin-bottom: 0px !important;
+}
+@media screen and (max-width:769px){
+  .is-fullwidth-mobile{
+    width:100%;
+  }
 }

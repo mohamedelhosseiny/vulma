@@ -25,6 +25,14 @@ import VeeValidate from 'vee-validate';
 import Notifications from 'vue-notification'
 import { VueAuthenticate } from 'vue-authenticate';
 import ReadMore from 'vue-read-more';
+import hero from '@/components/utils/hero';
+import rectangleThumbnail from '@/components/utils/rectangleThumbnail';
+import Thumb from '@/components/utils/Thumb';
+
+
+Vue.component('hero', hero);
+Vue.component('rectangleThumbnail', rectangleThumbnail);
+Vue.component('Thumb', Thumb);
 
 Vue.use(ReadMore);
 Vue.use(Notifications)

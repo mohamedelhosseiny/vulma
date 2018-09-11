@@ -19,7 +19,6 @@ export default {
   @import './assets/scss/vars';
   @import './assets/scss/plugins';
   @import './assets/scss/helpers';
-  @import '~bulma';
   @import './assets/scss/reset';
   @import url('https://fonts.googleapis.com/css?family=Amiri');
   @import '~bulma';
@@ -28,7 +27,7 @@ export default {
   }
   .rtl{
     direction: rtl;
-    font-family: 'Amiri', serif;
+    font-family: 'DroidArabicKufiRegular', serif;
     .navbar-end {
       margin-left:unset;
       margin-right:auto;
