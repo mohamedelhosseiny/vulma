@@ -27,6 +27,7 @@
               <li v-scroll-to="'#insights'">{{ $t('navbar.insights') }}</li>
               <li v-scroll-to="'#people'">{{ $t('navbar.people') }}</li>
               <li v-scroll-to="'#contact'">{{ $t('navbar.contact') }}</li>
+              <language-dropdown></language-dropdown>
               <li 
               @click="changeLanguage">
               {{ $t('utils.locale') }}
@@ -39,11 +40,16 @@
 </template>
 <script>
   import {bus} from '@/main'
+  import LanguageDropdown from '@/components/utils/languageDropdown';
+
   export default{
     data() {
       return {
         menuIsActive: false,
       }
+    },
+    components:{
+      LanguageDropdown,
     },
     watch: {
       '$route'(to, from) {
