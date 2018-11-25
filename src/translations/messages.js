@@ -7,6 +7,9 @@ export default {
       loading: 'Loading ..',
       error: 'Oops, something went wrong'
     },
+    navbar: {
+      home: 'Home'
+    }
   },
   ar: {
     utils:{

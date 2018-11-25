@@ -14,24 +14,22 @@
           <div class="navbar-burger burger" data-target="navMenubd-example" @click="menuIsActive = !menuIsActive">
             <span></span>
             <span></span>
-            <span></span>
           </div>
         </div>
 
         <div id="navMenubd-example" class="navbar-menu" :class="{'is-active': menuIsActive}">
           <div class="navbar-end">
             <ul>
-              <li v-scroll-to="'#home'"> {{ $t('navbar.home') }}</li>
-              <li v-scroll-to="'#services'">{{ $t('navbar.services') }}</li>
-              <li v-scroll-to="'#about'">{{ $t('navbar.about') }}</li>
-              <li v-scroll-to="'#insights'">{{ $t('navbar.insights') }}</li>
-              <li v-scroll-to="'#people'">{{ $t('navbar.people') }}</li>
-              <li v-scroll-to="'#contact'">{{ $t('navbar.contact') }}</li>
-              <language-dropdown></language-dropdown>
-              <li 
+              <li :class="{current: $route.path === '/'}"> {{ $t('navbar.home') }}</li>
+              <li :class="{current: $route.path === '/about'}">About Us</li>
+              <li :class="{current: $route.path === '/about'}">Capabilities</li>
+              <li :class="{current: $route.path === '/about'}">Solutions</li>
+              <li :class="{current: $route.path === '/about'}">Careers</li>
+              <li :class="{current: $route.path === '/about'}">Contact Us</li>
+              <!-- <li 
               @click="changeLanguage">
               {{ $t('utils.locale') }}
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -39,17 +37,16 @@
     </nav>
 </template>
 <script>
-  import {bus} from '@/main'
-  import LanguageDropdown from '@/components/utils/languageDropdown';
+  // import {bus} from '@/main'
 
   export default{
+    created() {
+      console.log(this.$route);
+    },
     data() {
       return {
         menuIsActive: false,
       }
-    },
-    components:{
-      LanguageDropdown,
     },
     watch: {
       '$route'(to, from) {
@@ -62,7 +59,7 @@
       }
     },
     methods:{
-      changeLanguage: function() {
+      changeLanguage() {
         let locale = 'en'
         if (this.$store.getters.locale == 'en') {
           locale = 'ar';
@@ -84,6 +81,9 @@
   .is-30px {
     width: 30px;
     margin-right: 5px;
+  }
+  .current {
+    color: red;
   }
   .is-active {
     ul {
@@ -109,7 +109,7 @@
     font-weight: 400;
     font-size: 1rem;
     color: white;
-    padding: 1.2em 0.8em;
+    padding: 0.8em;
     cursor: pointer;
   }
   ul {

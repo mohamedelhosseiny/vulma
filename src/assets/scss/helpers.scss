@@ -44,6 +44,10 @@
 }
 //end background
 
+.flex-column {
+  flex-direction: column;
+}
+
 //typography
 .is-7 {
   font-size: 0.85rem !important;
@@ -118,6 +122,12 @@ p.is-white{
   align-items: flex-start;
   justify-content: center;
 }
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
 // end positioning
 
 
@@ -151,6 +161,12 @@ p.is-white{
 }
 .m-b-50{
   margin-bottom:50px !important;
+}
+.m-r-10{
+  margin-right: 10px !important;
+}
+.m-l-10{
+  margin-left: 10px !important;
 }
 .is-fullheight{
   min-height:calc(100vh - 200px);

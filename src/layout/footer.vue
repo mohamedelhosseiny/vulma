@@ -1,12 +1,27 @@
 <template>
-  <footer class="footer">
+  <footer class="m-t-10">
     <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Vulma</strong> by <a href="http://seifsayed.com">Seif Sayed</a>. The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-        </p>
+      <div class="columns is-9 is-variable">
+        <div class="column is-6">
+          <p class="subtitle m-b-15 is-white is-6">Privacy policy</p>
+          <p class="subtitle is-white is-6">2018 ATD All copyrights reserved.</p>
+        </div>
+        <div class="column">
+          <p class="subtitle m-b-10 is-white is-6">About</p>
+          <p class="subtitle m-b-10 is-white is-6">Contact</p>
+          <p class="subtitle is-white is-6">Archives</p>
+        </div>
+        <div class="column">
+          <img src="" alt="">
+        </div>
       </div>
     </div>
   </footer>
 </template>
+
+<style lang="scss" scoped>
+  footer {
+    padding: 2rem;
+    background-image: linear-gradient(to right, orange , yellow);
+  }
+</style>
