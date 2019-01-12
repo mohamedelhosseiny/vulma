@@ -17,6 +17,6 @@ export default {
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
-    height: 70vh;
+    height: 80vh;
   }
 </style>
