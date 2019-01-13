@@ -1,8 +1,16 @@
+import hero from '@/components/utils/hero';
+import card from '@/components/utils/card';
+import Thumb from '@/components/utils/Thumb';
 import Vue from 'vue';
+import 'vue-awesome/icons';
+import VueI18n from 'vue-i18n';
+import Icon from 'vue-awesome/components/Icon';
+import axios from 'axios';
+import vMediaQuery from 'v-media-query';
+import VueAxios from 'vue-axios';
+import '../router';
 // import VueLazyImage from 'vue-lazy-images';
 // import VueCarousel from 'vue-carousel';
-import 'vue-awesome/icons';
-import Icon from 'vue-awesome/components/Icon';
 // import FlagIcon from 'vue-flag-icon';
 // import Vue2Filters from 'vue2-filters';
 // import VueAnalytics from 'vue-analytics';
@@ -10,24 +18,16 @@ import Icon from 'vue-awesome/components/Icon';
 // import SocialSharing from 'vue-social-sharing';
 // // import Paginate from 'vuejs-paginate';
 // import VueTimeago from 'vue-timeago';
-import VueI18n from 'vue-i18n';
 // import VueScrollTo from 'vue-scrollto';
 // import createPersist from 'vuex-localstorage';
-import '../router';
-import vMediaQuery from 'v-media-query';
-// import checkView from 'vue-check-view'
-import axios from 'axios';
-import VueAxios from 'vue-axios';
-// import VTooltip from 'v-tooltip'
-// // import Buefy from 'buefy'
+// // import checkView from 'vue-check-view'
+// // import VTooltip from 'v-tooltip'
+// // // import Buefy from 'buefy'
 // import vueSlider from 'vue-slider-component';
 // import VeeValidate from 'vee-validate';
 // import Notifications from 'vue-notification'
 // import { VueAuthenticate } from 'vue-authenticate';
 // import ReadMore from 'vue-read-more';
-import hero from '@/components/utils/hero';
-import card from '@/components/utils/card';
-import Thumb from '@/components/utils/Thumb';
 
 
 Vue.component('hero', hero);

@@ -22,7 +22,7 @@
             <ul>
               <li :class="{current: $route.path === '/'}"> {{ $t('navbar.home') }}</li>
               <li :class="{current: $route.path === '/about'}">About Us</li>
-              <li :class="{current: $route.path === '/about'}">Capabilities</li>
+              <!-- <li :class="{current: $route.path === '/about'}">Capabilities</li> -->
               <li :class="{current: $route.path === '/about'}">Solutions</li>
               <li :class="{current: $route.path === '/about'}">Careers</li>
               <li :class="{current: $route.path === '/about'}">Contact Us</li>
@@ -40,32 +40,29 @@
   // import {bus} from '@/main'
 
   export default{
-    created() {
-      console.log(this.$route);
-    },
     data() {
       return {
         menuIsActive: false,
-      }
+      };
     },
     watch: {
-      '$route'(to, from) {
+      $route: function route() {
         this.menuIsActive = false;
       },
-      '$mq.resize': function (argument) {
-        if (argument > 1022 ) {
+      '$mq.resize': function d(argument) {
+        if (argument > 1022) {
           this.menuIsActive = false;
         }
-      }
+      },
     },
-    methods:{
+    methods: {
       changeLanguage() {
-        let locale = 'en'
-        if (this.$store.getters.locale == 'en') {
+        let locale = 'en';
+        if (this.$store.getters.locale === 'en') {
           locale = 'ar';
-        };
+        }
         return this.$store.commit('setLocale', locale);
-      }
+      },
     },
   };
 </script>

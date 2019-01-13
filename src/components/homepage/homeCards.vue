@@ -26,12 +26,6 @@
   </section>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style scoped lang="scss">
 .m-b-2vh {
   margin-bottom: 1vh !important;

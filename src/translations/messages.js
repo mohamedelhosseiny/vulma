@@ -1,23 +1,23 @@
 export default {
   en: {
-    utils:{
-      locale: 'ar'
+    utils: {
+      locale: 'ar',
     },
-    loading:{
+    loading: {
       loading: 'Loading ..',
-      error: 'Oops, something went wrong'
+      error: 'Oops, something went wrong',
     },
     navbar: {
-      home: 'Home'
-    }
+      home: 'Home',
+    },
   },
   ar: {
-    utils:{
+    utils: {
       locale: 'en',
     },
-    loading:{
+    loading: {
       loading: 'جار التحميل ..',
-      error: 'تبا شيء ما حدث بشكل خاطئ'
+      error: 'تبا شيء ما حدث بشكل خاطئ',
     },
   },
 };

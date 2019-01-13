@@ -7,6 +7,7 @@
 
 <script>
 import baseLayout from '@/layout/base';
+
 export default {
   name: 'app',
   components: {
@@ -20,7 +21,6 @@ export default {
   @import './assets/scss/plugins';
   @import './assets/scss/helpers';
   @import './assets/scss/reset';
-  @import url('https://fonts.googleapis.com/css?family=Amiri');
   @import '~bulma';
   .ltr{
     direction: ltr;

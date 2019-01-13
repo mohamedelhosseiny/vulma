@@ -3,8 +3,8 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import directives from './directives';
-import plugins from './plugins';
+import './directives';
+import './plugins';
 import translation from './translations';
 import store from './store';
 
